@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>crm clients - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.27.0/feather.min.js"
+        integrity="sha256-xHkYry2yRjy99N8axsS5UL/xLHghksrFOGKm9HvFZIs=" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+        <div class="col-lg-4">
+            <div class="card m-b-30">
+                <div class="card-body py-15">
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <img id="myImg" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""
+                                style="width:80%;max-width:900px">
+                        </div>
+                        <div class="col-lg-8">
+                            <h4>Nom du Client</h4>
+
+                            <div class="table-responsive">
+                                <table class="table table-borderless ">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="p-1">Matricule du vehicule :</th>
+                                            <td>AA-123-AA</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="p-1">N° Container :</th>
+                                            <td>CTQU 000003</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="p-1">Date :</th>
+                                            <td>2011-04-25</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01" style="width:80%;max-width:200px">
+            <div id="caption"></div>
+        </div>
+        <!-- End col -->
+        <!-- Start col -->
+
+    </div>
+    </div>
+
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+    </div>
+
+
+
+    <style type="text/css">
+        body {
+            background: #f2f3f7;
+            margin-top: 20px;
+        }
+
+        .m-b-30 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #8A98AC;
+        }
+
+        .table-borderless td {
+            border: 0 !important;
+        }
+
+        .table td {
+            color: #8A98AC;
+            vertical-align: middle;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            padding: 0.6rem;
+        }
+
+        .btn-primary-rgba {
+            background-color: rgba(80, 111, 228, 0.1);
+            border: none;
+            color: #506fe4;
+        }
+
+        .btn-success-rgba {
+            background-color: rgba(67, 209, 135, 0.1);
+            border: none;
+            color: #43d187;
+        }
+
+        .card {
+            border: none;
+            border-radius: 3px;
+            background-color: #ffffff;
+        }
+    </style>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
